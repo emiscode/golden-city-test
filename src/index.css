@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,800;1,6..12,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-secondary-800 bg-secondary-50 dark:text-secondary-100;
+    transition: background-color 300ms ease, color 300ms ease;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-primary-700 bg-primary-100 hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+  }
+  
+  .input {
+    @apply block w-full rounded-md border-secondary-300 dark:border-secondary-600 bg-white dark:bg-secondary-700 text-secondary-800 dark:text-secondary-100 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-secondary-800 dark:text-secondary-100 rounded-lg shadow-md overflow-hidden transition-colors;
+  }
+}
+
+/* Animated gradient overlay for hero */
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(1200px 600px at 20% 10%, rgba(6,130,255,0.35), transparent 60%),
+              radial-gradient(800px 400px at 80% 30%, rgba(255,187,0,0.25), transparent 60%),
+              linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.45) 100%);
+  animation: heroGradientDrift 14s ease-in-out infinite alternate;
+}
+
+@keyframes heroGradientDrift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(-2%, -1%, 0) scale(1.02);
+  }
+}
+
+/* Semantic theme utilities */
+@layer components {
+  .page-bg { @apply bg-secondary-50 dark:bg-secondary-900 transition-colors; }
+  .surface { @apply bg-white dark:bg-secondary-800 transition-colors; }
+  .badge-surface { @apply bg-white dark:bg-secondary-900; }
+  .text-muted { @apply text-secondary-600 dark:text-secondary-300; }
+  .text-meta { @apply text-secondary-500 dark:text-secondary-400; }
+  .text-accent { @apply text-primary-600 dark:text-primary-400; }
+  .text-success { @apply text-green-600 dark:text-green-400; }
+  .link-muted { @apply text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 transition-colors; }
+  .hover-surface-muted { @apply hover:bg-primary-50 dark:hover:bg-secondary-700 transition-colors; }
+  .chip { @apply bg-secondary-100 text-secondary-600 dark:bg-secondary-700 dark:text-secondary-200; }
+}
