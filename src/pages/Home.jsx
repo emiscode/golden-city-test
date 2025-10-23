@@ -260,7 +260,7 @@ function Home() {
           >
           {/* Ken Burns animated background image */}
           <motion.img
-            src="/home.svg"
+            src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1674"
             alt="Hero background"
             className="w-full h-full object-cover"
             style={{ willChange: 'transform', objectPosition: '50% 40%' }}
