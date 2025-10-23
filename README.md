@@ -1,3 +1,11 @@
+# Frontend Demo
+
+https://www.loom.com/share/18a71e7554bc42c1bae4166affc7960b
+
+# Backend Demo
+
+https://www.loom.com/share/7eba78b5ac0744bc9b66aee2c3662dea
+
 #### GoldenCity is a modern real estate investment platform that combines traditional property investing with cryptocurrency payments. Built with React and Tailwind CSS, it mirrors the functionality of Arrived.com while adding blockchain-based transaction capabilities.
 
 ## Key Features
